@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
   schedule:
   # Daily at 6:23 AM UTC
-  - cron: '23 6 * * *'
+  - cron: '0 * * * *'
   # For hourly at 42 minutes past the hour: '42 * * * *'
 
 permissions:
