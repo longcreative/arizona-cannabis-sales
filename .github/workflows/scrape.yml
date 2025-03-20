@@ -55,7 +55,8 @@ jobs:
     - name: Run the scraper
       run: |
         ./scrape.sh
-        ./timestamp.sh
+    - name: rename file
+      run: mv azdor.gov-sites-default-files-document-MJ_byPeriodCovered.pdf.pdf sales.pdf 
     - name: Commit and push
       run: |-
         git config user.name "Automated"
