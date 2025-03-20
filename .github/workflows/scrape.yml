@@ -56,7 +56,11 @@ jobs:
       run: |
         ./scrape.sh
     - name: rename file
-      run: mv azdor.gov-sites-default-files-document-MJ_byPeriodCovered.pdf.pdf sales.pdf 
+      run: |
+        file="arizona_sales.pdf"
+        timestamp=$(date +%Y%m%d_%H%M%S)
+        new_file_name="${timestamp}_${file}"
+        mv azdor.gov-sites-default-files-document-MJ_byPeriodCovered.pdf.pdf "$new_file_name" 
     - name: Commit and push
       run: |-
         git config user.name "Automated"
