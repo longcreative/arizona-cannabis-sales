@@ -57,9 +57,9 @@ jobs:
         ./scrape.sh
     - name: rename file
       run: |
-        file="arizona_sales.pdf"
+        file="arizona_sales"
         timestamp=$(date +%m%d%Y_%H)
-        new_file_name="${file}_${timestamp}"
+        new_file_name="${file}_${timestamp}.pdf"
         mv azdor.gov-sites-default-files-document-MJ_byPeriodCovered.pdf.pdf pdfs/"$new_file_name" 
     - name: Commit and push
       run: |-
