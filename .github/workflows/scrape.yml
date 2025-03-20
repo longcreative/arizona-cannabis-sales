@@ -58,7 +58,7 @@ jobs:
     - name: rename file
       run: |
         file="arizona_sales"
-        timestamp=$(date +%m%d%Y_%H)
+        timestamp=$(date +%m%d%Y)
         new_file_name="${file}_${timestamp}.pdf"
         mv azdor.gov-sites-default-files-document-MJ_byPeriodCovered.pdf.pdf pdfs/"$new_file_name" 
     - name: Commit and push
